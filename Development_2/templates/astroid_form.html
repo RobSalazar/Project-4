@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div>
+        <form method="POST" action ="">
+            {{form.hidden_tag()}}
+            <fieldset>
+                <legend> Enter New Astroid Discovery</legend>
+                <div>
+                    {{ form.ad.label() }}
+                    {{ form.ad() }}
+                </div>
+                <div>
+                    {{ form.q.label() }}
+                    {{ form.q() }}
+                </div>
+                <div>
+                    {{ form.a.label() }}
+                    {{ form.a() }}
+                </div>
+                <div>
+                    {{ form.ad.label() }}
+                    {{ form.ad() }}
+                </div>
+                <div>
+                    {{ form.e.label() }}
+                    {{ form.e() }}
+                </div>
+                <div>
+                    {{ form.dv.label() }}
+                    {{ form.dv() }}
+                </div>
+                <div>
+                    {{ form.per.label() }}
+                    {{ form.per() }}
+                </div>
+                <div>
+                    {{ form.moid.label() }}
+                    {{ form.moid() }}
+                </div>
+                <div>
+                    {{ form.diameter.label() }}
+                    {{ form.diameter() }}
+                </div>
+            </fieldset>
+            <div>
+                {{form.submit()}}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

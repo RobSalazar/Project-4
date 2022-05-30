@@ -16,7 +16,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = FALSE
 #Init db 
 db = SQLAlchemy(app)
 #Init ma
-ma =Marshmallow(app)
+ma = Marshmallow(app)
 values = []
 
 
@@ -52,7 +52,7 @@ products_schema = ProductSchema(many= True)
 
 # ...
 
-@app.route('/create/', methods=('GET', 'POST'))
+@app.route('/create', methods=('GET', 'POST'))
 def create():
     if request.method == 'POST':
         ad = request.form['ad']
