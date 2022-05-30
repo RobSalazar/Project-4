@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 import os
 from form import New_Astroid_Form
+from predict import predictor
 #Init
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
