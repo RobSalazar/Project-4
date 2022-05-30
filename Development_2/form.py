@@ -4,27 +4,19 @@ from wtforms.validators import DataRequired, Length
 
 class New_Astroid_Form(FlaskForm):
     ad = FloatField('ad',
-    validators = [DataRequired(),
-    Length(min=2, max = 7)])
+    validators = [DataRequired()])
     q = FloatField('q',
-    validators = [DataRequired(),
-    Length(min=2, max = 7)])
+    validators = [DataRequired()])
     a = FloatField('a',
-    validators = [DataRequired(),
-    Length(min=2, max = 7)])
+    validators = [DataRequired()])
     e = FloatField('e',
-    validators = [DataRequired(),
-    Length(min=2, max = 7)])
+    validators = [DataRequired()])
     dv = FloatField('dv',
-    validators = [DataRequired(),
-    Length(min=2, max = 7)])
+    validators = [DataRequired()])
     per = FloatField('per',
-    validators = [DataRequired(),
-    Length(min=2, max = 7)])
+    validators = [DataRequired()])
     moid = FloatField('moid',
-    validators = [DataRequired(),
-    Length(min=2, max = 7)])
+    validators = [DataRequired()])
     diameter = FloatField('diameter',
-    validators = [DataRequired(),
-    Length(min=2, max = 7)])
+    validators = [DataRequired()])
     submit = SubmitField('Submit')

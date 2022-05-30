@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, url_for, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 import os
@@ -84,6 +84,9 @@ def home():
 def Astroid_Form():
 
     form = New_Astroid_Form()
+    if form.validate_on_submit():
+        flash(f'Your astriod has been created', 'success')
+        return redirect(url_for('home'))
     return render_template('astroid_form.html', form = form)
 
 
