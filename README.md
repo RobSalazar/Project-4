@@ -1,7 +1,7 @@
 # Is There a Gold Rush in Space? -Project 4
 
 <p align="center">
-  <img src="images/Aliens.jpg" />
+  <img src="images/aliens.jpg" />
 </p>
 
 ##### Table of Contents  
