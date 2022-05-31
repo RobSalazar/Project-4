@@ -48,7 +48,7 @@ After having researched asteroids for many many hours we were able to decide how
 - - -
 
 ## Correlation
-Before we ran multiple machine learning algorithms we used a correlation heatmap to zero-in on exactly which features we wanted to use. It was simple using seaborn to create a heatmap to find the points of correlation between all of our different features. The features we ended up using were (in order): aphelion distance, perihelion, semi-major axis, eccentricity, delta-velocity, period (how long it takes for 1 revolution around the sun), minimum orbit intersection distance, and diameter. Of all of these features, diameter seemed to be the feature that correlated the most to an asteroids profitability. For a visual reprentation of all of these features visit [this](https://public.tableau.com/app/profile/christopher.uranga/viz/AsteroidVisualizations/Diameter) tableau public page to see. Below is the heatmap we created to visually see all of this.
+Before we ran multiple machine learning algorithms we used a correlation heatmap to zero-in on exactly which features we wanted to use. It was simple using seaborn to create a heatmap to find the points of correlation between all of our different features. The features we ended up using were (in order): aphelion distance, perihelion, semi-major axis, eccentricity, delta-velocity, period (how long it takes for 1 revolution around the sun), minimum orbit intersection distance, and diameter. Of all of these features, diameter seemed to be the feature that correlated the most to an asteroids profitability. For a visual representation of all of these features visit [this](https://public.tableau.com/app/profile/christopher.uranga/viz/AsteroidVisualizations/Diameter) tableau public page to see. Below is the heatmap we created to visually see all of this.
 
 <p align="center">
   <img src="images/heat_map.PNG" />
@@ -73,7 +73,7 @@ For our machine learning models we ran various tests to finalize a decision. We 
            <p><img src="images/clustered_scatter.PNG" /> </p>
 </details>
 
-The Resoning for the class to have less clusters than the spectral type is because there are far less classes than there are spectral types.
+The Reasoning for the class to have less clusters than the spectral type is because there are far fewer classes than there are spectral types.
 
 <img src="images/acc_plot.PNG" width="325"/> <img src="images/loss_plot.PNG" width="325"/>
 
