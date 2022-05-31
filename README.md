@@ -1,4 +1,4 @@
-# Is There a Gold Rush in Space? -[Project 4](https://docs.google.com/presentation/d/1WrAVQI9V08n4OEUu_3g1Q8SCExFkWFP5iZyAqFr-Fxc/edit#slide=id.g12f58cb7c27_0_123)
+# Is There a Gold Rush in Space? -[Project 4](https://docs.google.com/presentation/d/1WrAVQI9V08n4OEUu_3g1Q8SCExFkWFP5iZyAqFr-Fxc/edit?usp=sharing)
 
 <p align="center">
   <img src="images/Aliens.jpg" />
