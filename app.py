@@ -1,14 +1,17 @@
+# Import dependancies
 from flask import Flask, request, render_template
 from think import thinker
 
-#Init
+# Initialize flask
 app = Flask(__name__)
 
+
+# Route to landing page
 @app.route('/')
 def Astroid_Form():
     return render_template('index.html')
 
-
+# Route for form to post user input
 @app.route('/', methods=['POST'])
 def Astroid_Form_post():
     variable = request.form['variable']
@@ -16,6 +19,6 @@ def Astroid_Form_post():
 
 
 
-#run serve 
+
 if __name__ == '__main__':
     app.run(debug=True)

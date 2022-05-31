@@ -41,6 +41,7 @@ new_df['profitable'] = (new_df['profit'] > 1).astype(int)
 new_df['diameter'] = new_df['diameter'].astype(float)
 new_df.to_csv('asteroid_data.csv', header = True)
 
+# Define our variables to use in our model
 X = new_df.drop(['full_name','profit','price','spec', 'class','profitable'], axis =1)
 y = new_df['profitable']
 
@@ -51,15 +52,19 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
 # Scaling the data for best results
 scaler = StandardScaler().fit(X_train)
 
-# Define the function for the flask app to use
+# Define the function for the flask app to use our ml algorithm
 def thinker(num):
     
+    # Created a container for our output
     output = []
 
-    url = "http://asterank.com/api/asterank?query=" 
+    # Defined the url to the website where we make api calls to
+    url = "http://asterank.com/api/asterank?query="
 
+    # Define the response 
     response = requests.get(url + '{"dv":{"$gt":0}}&limit=' + num).json()
 
+    # Scaling the data live as it is being read in on a loop
     asteroid_test = scaler.transform(np.array([response[0]['ad'],
                             response[0]['q'], 
                             response[0]['a'], 
@@ -69,6 +74,7 @@ def thinker(num):
                             response[0]['moid'], 
                             response[0]['diameter']]).reshape(1,-1))
     
+    # Reshaoping and scaling data to be fed into our output for loop
     for n in range(1,int(num)):
         asteroid_test2 = np.array([response[n]['ad'],
                         response[n]['q'], 
@@ -80,9 +86,12 @@ def thinker(num):
                         response[n]['diameter']]).reshape(1,-1)
         asteroid_test = np.append(asteroid_test, scaler.transform(asteroid_test2),0)
 
+    # Loading the model we chose to use for this data
     rf_model = joblib.load("ml_models/rf_model.joblib")
     test = rf_model.predict(asteroid_test)
     num_accurate = 0
+
+    # Iterate through above ml outputs and convert binary outputs into non-numerical words
     for n in range(int(num)):
         output.append(f"Actual: $ {response[n]['profit']}<br>")
         if test[n] == 0:
@@ -97,6 +106,7 @@ def thinker(num):
         output.append("--------------------<br>")
     output.append(str((num_accurate/int(num))*100)+'% accurate')
 
+    # Converting our data into the string format to be able to use for our return in our flask app
     final = ""
 
     for line in output:
