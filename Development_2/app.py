@@ -76,18 +76,19 @@ new_astroids_schema = NewAstroidSchema(many = True)
 #     result = new_astroids_schema.dump(all_astroids)
 #     return jsonify(result)
 
-@app.route('/')
-def home():
+# @app.route('/')
+# def home():
     
-    return render_template('index.html')
+#     return render_template('index.html')
 
-@app.route('/Astroid_Form', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def Astroid_Form():
 
     form = New_Astroid_Form()
+    print(form)
     if form.validate_on_submit():
-        flash(f'Your astriod has been created', 'success')
-        return redirect(url_for('home'))
+        flash(f'Your astroid data has been calculated', 'success')
+        return redirect(url_for('Astroid_Form'))
     return render_template('astroid_form.html', form = form)
 
 
