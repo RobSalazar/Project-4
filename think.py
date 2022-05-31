@@ -39,7 +39,7 @@ new_df = new_df.dropna()
 # Creating a row with 0 and 1 as values to be able to run machine learning models using this data
 new_df['profitable'] = (new_df['profit'] > 1).astype(int)
 new_df['diameter'] = new_df['diameter'].astype(float)
-new_df.to_csv('asteroid_data.csv', header = True)
+new_df.to_csv('resources/asteroid_data.csv', header = True)
 
 # Define our variables to use in our model
 X = new_df.drop(['full_name','profit','price','spec', 'class','profitable'], axis =1)
