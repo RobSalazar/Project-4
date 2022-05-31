@@ -6,18 +6,18 @@
 
 ##### Table of Contents  
 - [Purpose](#purpose)  
-- [Asteroid Info](#instructions)  
-- [Process](#summary)
+- [Asteroid Info](#asteroid-info)  
+- [Process](#process-and-etl)
 - [Correlation](#correlation)
-- [Machine Learning](#correlation)
-- [Website](#)
+- [Machine Learning](#machine-learning)
+- [Website](#website--heroku)
    
-<a name="background"/>
-<a name="instructions"/>
-<a name="summary"/>
-<a name="Loss"/>
-<a name="Loss"/>
-<a name="Loss"/>
+<a name="purpose"/>
+<a name="asteroid-info"/>
+<a name="process-and-etl"/>
+<a name="correlation"/>
+<a name="machine-learning"/>
+<a name="website--heroku"/>
 
 ## Purpose
 The Purpose of our project was to utilize machine learning to optimize the profit of future asteroid mining. For this, we trained and tested various machine learning models until we optimized and tuned our model to the highest accuracy score. We did this by first creating a hypothesis of which features we thought may impact our model the most and then running many different models to optimize and tune the model we decided on using. In the end we were able to tell using a handful of features if an asteroid was profitable to an accuracy of over 80%. The most impactful optimization we did was removing features that were not easy to obtain without spending more resources, like time and money, and those were asteroid class and spectral class. To obtain these features an asteroid must be observed and classified by scientists running expensive equipment and can take many months. In our research we also found that only 1% of asteroids have these defining features, so it was very important for us to only utilize features that could be easily obtained.
