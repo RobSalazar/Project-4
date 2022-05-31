@@ -21,6 +21,7 @@ ma = Marshmallow(app)
 
 #New Astroid Class/Model
 class Astroids(db.Model):
+    __tablename__ = 'astroids'
     id = db.Column(db.Integer, primary_key=True)
     ad = db.Column(db.Float)
     q = db.Column(db.Float)
